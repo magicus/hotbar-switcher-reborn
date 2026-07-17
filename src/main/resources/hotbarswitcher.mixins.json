@@ -1,14 +1,13 @@
 {
-	"required": true,
-	"package": "net.maroonangel.hotbarswitcher.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-	],
-	"client": [
-		"GuiMixin",
-		"InventoryAccessor"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
+  "client": [
+    "GuiMixin",
+    "InventoryAccessor"
+  ],
+  "compatibilityLevel": "JAVA_21",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [],
+  "package": "net.maroonangel.hotbarswitcher.mixin",
+  "required": true
 }

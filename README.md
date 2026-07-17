@@ -13,4 +13,3 @@ You'll have to set the keybinding in the controls page. If you hold shift while 
 ![](docs/animation.gif)
 
 Requires [Fabric API](https://www.curseforge.com/minecraft/mc-mods/fabric-api).
- 
