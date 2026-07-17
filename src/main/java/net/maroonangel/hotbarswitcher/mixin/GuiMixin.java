@@ -5,7 +5,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.inventory.ClickType;
+import net.minecraft.world.inventory.ContainerInput;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -30,14 +30,14 @@ public abstract class GuiMixin {
                     int mid = top + 9;
                     int bot = mid + 9;
 
-                    mc.gameMode.handleInventoryMouseClick(0, top, selectedSlot, ClickType.SWAP, player);
-                    mc.gameMode.handleInventoryMouseClick(0, mid, selectedSlot, ClickType.SWAP, player);
-                    mc.gameMode.handleInventoryMouseClick(0, bot, selectedSlot, ClickType.SWAP, player);
+                    mc.gameMode.handleContainerInput(0, top, selectedSlot, ContainerInput.SWAP, player);
+                    mc.gameMode.handleContainerInput(0, mid, selectedSlot, ContainerInput.SWAP, player);
+                    mc.gameMode.handleContainerInput(0, bot, selectedSlot, ContainerInput.SWAP, player);
                 } else {
                     int selectedSlot = ((InventoryAccessor) inventory).getSelected();
                     int topSlot = selectedSlot + 27;
 
-                    mc.gameMode.handleInventoryMouseClick(0, topSlot, selectedSlot, ClickType.SWAP, player);
+                    mc.gameMode.handleContainerInput(0, topSlot, selectedSlot, ContainerInput.SWAP, player);
                 }
             }
         }
