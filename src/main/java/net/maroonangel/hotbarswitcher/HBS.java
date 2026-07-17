@@ -7,13 +7,13 @@ import net.minecraft.util.Identifier;
 
 public class HBS {
 
-	public static KeyBinding switchKey = createKeyBinding(Identifier.of("hotbarswitcher", "swap"), InputUtil.Type.KEYSYM, 82, "hotbarswitcher");
+	public static KeyBinding switchKey = createKeyBinding(Identifier.of("hotbarswitcher", "swap"), InputUtil.Type.KEYSYM, 82, KeyBinding.Category.INVENTORY);
 
 	public void init() {
 
 	}
 
-	private static KeyBinding createKeyBinding(Identifier id, InputUtil.Type type, int code, String category) {
-        return KeyBindingHelper.registerKeyBinding(new KeyBinding("key." + id.getNamespace() + "." + id.getPath(), type, code, KeyBinding.Category.create(Identifier.of(category, "main"))));
+	private static KeyBinding createKeyBinding(Identifier id, InputUtil.Type type, int code, KeyBinding.Category category) {
+        return KeyBindingHelper.registerKeyBinding(new KeyBinding("key." + id.getNamespace() + "." + id.getPath(), type, code, category));
 	}
 }
