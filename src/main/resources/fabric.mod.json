@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "hotbar-switcher-reborn",
-	"version": "${version}",
+	"version": "${mod_version}",
 	"name": "Hotbar Switcher Reborn",
 	"description": "Easily transfer a single item between your inventory and your hotbar",
 	"authors": [
@@ -23,8 +23,8 @@
 		"hotbarswitcher.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.15.11",
-		"fabric": "*",
-		"minecraft": ">=1.21.9"
+		"fabricloader": ">=${loader_version}",
+		"minecraft": "${supported_minecraft_versions}",
+		"fabric-api": ">=${fabric_api_version}"
 	}
 }
