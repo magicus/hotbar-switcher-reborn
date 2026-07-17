@@ -5,8 +5,8 @@
 	"mixins": [
 	],
 	"client": [
-		"InGameHudMixin",
-		"PlayerInventoryAccessor"
+		"GuiMixin",
+		"InventoryAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -1,19 +1,19 @@
 package net.maroonangel.hotbarswitcher;
 
+import com.mojang.blaze3d.platform.InputConstants;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
-import net.minecraft.client.option.KeyBinding;
-import net.minecraft.client.util.InputUtil;
-import net.minecraft.util.Identifier;
+import net.minecraft.client.KeyMapping;
+import net.minecraft.resources.ResourceLocation;
 
 public class HBS {
 
-	public static KeyBinding switchKey = createKeyBinding(Identifier.of("hotbarswitcher", "swap"), InputUtil.Type.KEYSYM, 82, KeyBinding.Category.INVENTORY);
+	public static KeyMapping switchKey = createKeyBinding(ResourceLocation.fromNamespaceAndPath("hotbarswitcher", "swap"), InputConstants.Type.KEYSYM, 82, KeyMapping.Category.INVENTORY);
 
 	public void init() {
 
 	}
 
-	private static KeyBinding createKeyBinding(Identifier id, InputUtil.Type type, int code, KeyBinding.Category category) {
-        return KeyBindingHelper.registerKeyBinding(new KeyBinding("key." + id.getNamespace() + "." + id.getPath(), type, code, category));
+	private static KeyMapping createKeyBinding(ResourceLocation id, InputConstants.Type type, int code, KeyMapping.Category category) {
+        return KeyBindingHelper.registerKeyBinding(new KeyMapping("key." + id.getNamespace() + "." + id.getPath(), type, code, category));
 	}
 }
