@@ -8,8 +8,8 @@ import net.minecraft.resources.Identifier;
 public class HBS {
     public static KeyMapping switchKey = createKeyBinding(
             Identifier.fromNamespaceAndPath("hotbarswitcher", "swap"),
-            InputConstants.Type.KEYSYM,
-            82,
+            InputConstants.Type.KEYBOARD,
+            InputConstants.KEY_R,
             KeyMapping.Category.INVENTORY);
 
     public void init() {}
