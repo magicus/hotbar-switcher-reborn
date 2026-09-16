@@ -1,30 +1,31 @@
 {
-	"schemaVersion": 1,
-	"id": "hotbar-switcher-reborn",
-	"version": "${mod_version}",
-	"name": "Hotbar Switcher Reborn",
-	"description": "Easily transfer a single item between your inventory and your hotbar",
-	"authors": [
-		"magicus", "MaroonAngel"
-	],
-	"contact": {
-		"homepage": "https://github.com/magicus/hotbar-switcher-reborn",
-		"sources": "https://github.com/magicus/hotbar-switcher-reborn"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/hotbarswitcher/icon.png",
-	"environment": "client",
-	"entrypoints": {
-		"main": [
-			"net.maroonangel.hotbarswitcher.HBS::init"
-		]
-	},
-	"mixins": [
-		"hotbarswitcher.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=${loader_version}",
-		"minecraft": "${supported_minecraft_versions}",
-		"fabric-api": ">=${fabric_api_version}"
-	}
+  "schemaVersion": 1,
+  "id": "hotbar-switcher-reborn",
+  "version": "${mod_version}",
+  "name": "Hotbar Switcher Reborn",
+  "description": "Easily transfer a single item between your inventory and your hotbar",
+  "authors": [
+    "magicus", "MaroonAngel"
+  ],
+  "contact": {
+    "homepage": "https://github.com/magicus/hotbar-switcher-reborn",
+    "issues": "https://github.com/magicus/hotbar-switcher-reborn/issues",
+    "sources": "https://github.com/magicus/hotbar-switcher-reborn"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/hotbarswitcher/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "net.maroonangel.hotbarswitcher.HBS::init"
+    ]
+  },
+  "mixins": [
+    "hotbarswitcher.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "${supported_minecraft_versions}",
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": ">=${fabric_api_version}"
+  }
 }
