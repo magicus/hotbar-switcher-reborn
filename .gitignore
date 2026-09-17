@@ -9,10 +9,6 @@ classes/
 
 *.launch
 
-# macos
-
-*.DS_Store
-
 # idea
 
 .idea/
@@ -27,6 +23,10 @@ classes/
 bin/
 .classpath
 .project
+
+# macos
+
+*.DS_Store
 
 # fabric
 

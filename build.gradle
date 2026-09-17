@@ -6,14 +6,16 @@ plugins {
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
-
-    // Fabric API
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 }
 
 ext.mod_version = "${project.mod_base_version}+${project.minecraft_version}"
 version = ext.mod_version
 ext.fabric_api_version = project.fabric_api_version.tokenize('+')[0]
+
+loom {
+    clientOnlyMinecraftJar()
+}
 
 processResources {
     inputs.properties([
